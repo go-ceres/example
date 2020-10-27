@@ -17,12 +17,13 @@ package main
 
 import (
 	"github.com/go-ceres/go-ceres/engine"
-	"github.com/go-ceres/go-ceres/helper/log"
+	_ "github.com/go-ceres/go-plugins/source/file"
+	"log"
 )
 
 func main() {
 	app := engine.Default()
 	if err := app.Run(); err != nil {
-		log.Panic(err)
+		log.Fatal(err)
 	}
 }
